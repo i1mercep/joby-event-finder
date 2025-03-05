@@ -7,7 +7,7 @@ from httpx import ASGITransport, AsyncClient
 
 from src.config import get_settings
 from src.main import app
-from tests.db_tests.conftest import load_db_fixture
+from tests.conftest import load_db_fixture
 
 DOCKER_CONTAINER = os.getenv("DOCKER_CONTAINER", "False").lower() == "true"
 settings = get_settings()
