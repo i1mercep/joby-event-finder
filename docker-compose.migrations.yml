@@ -1,0 +1,12 @@
+services:
+  eventfinder_backend_migrations:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: eventfinder_backend_migrations
+    volumes:
+      - .:/app
+    environment:
+      DATABASE_URL: sqlite+aiosqlite:///database/test_db.sqlite
+      ADMIN_USERNAME: admin
+      ADMIN_EMAIL: "admin@example.test"

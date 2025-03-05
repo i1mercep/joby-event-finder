@@ -1,0 +1,68 @@
+[project]
+name = "event-finder"
+version = "0.1.0"
+description = "Find events in area - Backend"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "pydantic<3.0.0",
+    "pydantic-settings==2.8.1",
+    "fastapi==0.115.11",
+    "uvicorn==0.34.0",
+    "alembic==1.14.1",
+    "sqlalchemy==2.0.38",
+    "sqlmodel==0.0.23",
+    "aiosqlite==0.21.0",
+    "pyyaml==6.0.2",
+]
+
+[project.optional-dependencies]
+dev = [
+    "coverage~=7.6.12",
+    "pytest~=8.3.5",
+    "pytest-asyncio~=0.25.3",
+    "ruff>=0.9.4,<1.0.0",
+    "uv>=0.5.26,<1.0.0",
+    "deepdiff~=8.2.0",
+    "httpx[http2]~=0.28.1",
+]
+
+[tool.ruff]
+target-version = "py313"
+line-length = 120
+
+[tool.ruff.lint]
+ignore = [
+    "CPY",    # Copyright
+    "ANN",    # Annotations
+    "D",      # Docstring
+    "DOC",    # Docstring
+    "INP001", # __init__.py missing
+    "ERA001", # commented code
+    "PTH",    # Pathlib
+    "FBT",    # Boolean argument
+    "F821",   # Undefined name
+    "PLR",    # Function arguments
+    "TC001",  # type-checking block
+    "COM812",
+    "ISC001",
+    "EM101",
+    "TRY003",
+]
+select = ["ALL"]
+# Allow autofix for all enabled rules (when `--fix`) is provided.
+fixable = ["ALL"]
+
+[tool.ruff.lint.per-file-ignores]
+"**/tests/*" = [
+    "S101",   # Assert used
+    "SLF001", # Private member accessed in tests
+    "PT006",  # pytest parametrize
+    "S106",   # Hardcoded password
+    "PLR",    # Too many arguments
+]
+
+[tool.pytest.ini_options]
+addopts = "-ra"
+asyncio_mode = "auto"
+asyncio_default_fixture_loop_scope = "function"

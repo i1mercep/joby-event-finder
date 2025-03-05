@@ -1,0 +1,67 @@
+{
+    "db": {
+        "users": [
+            {
+                "id": 1,
+                "username": "admin",
+                "email": "admin@example.com"
+            },
+            {
+                "id": 2,
+                "username": "user_a",
+                "email": "user_a@example.com"
+            },
+            {
+                "id": 3,
+                "username": "user_b",
+                "email": "user_b@example.com"
+            }
+        ]
+    },
+    "api_response": {
+        "users": [
+            {
+                "id": 1,
+                "username": "admin",
+                "email": "admin@example.com",
+                "disabled_at": null
+            },
+            {
+                "id": 2,
+                "username": "user_a",
+                "email": "user_a@example.com",
+                "disabled_at": null
+            },
+            {
+                "id": 3,
+                "username": "user_b",
+                "email": "user_b@example.com",
+                "disabled_at": null
+            }
+        ],
+        "user_1": {
+            "id": 1,
+            "username": "admin",
+            "email": "admin@example.com",
+            "disabled_at": null
+        },
+        "delete_user_b": {
+            "id": 3,
+            "username": "user_b",
+            "email": "user_b@example.com",
+            "disabled_at": null
+        },
+        "create_abrandnewuser": {
+            "id": 4,
+            "username": "abrandnewuser",
+            "email": "abrandnewuser@example.com",
+            "disabled_at": null
+        },
+        "update_user_b": {
+            "id": 3,
+            "username": "user_b_updated",
+            "email": "user_b@example.com",
+            "disabled_at": null
+        }
+    }
+}

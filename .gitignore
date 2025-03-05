@@ -1,0 +1,29 @@
+# Python-generated files
+__pycache__/
+*.py[oc]
+build/
+dist/
+wheels/
+*.egg-info
+
+# Coverage pytest
+.coverage
+
+# Environment
+env
+.env
+
+# Virtual environments
+.venv
+
+# Log files
+*.log
+
+# Playground
+_.py
+
+# Database
+*.sqlite
+
+# Playground
+_.py

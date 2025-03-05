@@ -1,0 +1,16 @@
+services:
+
+  eventfinder_backend:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: eventfinder_backend
+    volumes:
+      - ./database:/app/database
+    env_file:
+      - ./env
+    ports:
+      - 8000:8000
+    restart: on-failure
+    entrypoint: ["/app/scripts/entrypoint.sh"]
+    command: /app/scripts/start.sh

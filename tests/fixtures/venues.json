@@ -1,0 +1,123 @@
+{
+    "db": {
+        "user": [
+            {
+                "id": 1,
+                "username": "admin",
+                "email": "admin@example.com"
+            }
+        ],
+        "venues": [
+            {
+                "id": 1,
+                "name": "The O2",
+                "latitude": 51.503,
+                "longitude": 0.003,
+                "user_id": 1
+            },
+            {
+                "id": 2,
+                "name": "Pinakothek der Moderne",
+                "latitude": 48.145,
+                "longitude": 11.568,
+                "user_id": 1
+            },
+            {
+                "id": 3,
+                "name": "Joby Aviation",
+                "latitude": 47.9679153,
+                "longitude": 11.6628976,
+                "user_id": 1
+            }
+        ],
+        "events": [
+            {
+                "id": 1,
+                "name": "Concert",
+                "description": "A live music concert.",
+                "starts_at": "2023-11-01T19:00:00Z",
+                "cancelled_at": null,
+                "duration": 120,
+                "venue_id": 1
+            },
+            {
+                "id": 2,
+                "name": "Art Exhibition",
+                "description": "An exhibition of modern art.",
+                "starts_at": "2023-11-05T10:00:00Z",
+                "cancelled_at": null,
+                "duration": 240,
+                "venue_id": 2
+            },
+            {
+                "id": 3,
+                "name": "Tech Conference",
+                "description": "A conference for tech enthusiasts.",
+                "starts_at": "2023-11-10T09:00:00Z",
+                "cancelled_at": null,
+                "duration": 480,
+                "venue_id": 3
+            }
+        ]
+    },
+    "api_response": {
+        "all_venues": [
+            {
+                "id": 1,
+                "name": "The O2",
+                "latitude": 51.503,
+                "longitude": 0.003,
+                "user_id": 1,
+                "description": null
+            },
+            {
+                "id": 2,
+                "name": "Pinakothek der Moderne",
+                "latitude": 48.145,
+                "longitude": 11.568,
+                "user_id": 1,
+                "description": null
+            },
+            {
+                "id": 3,
+                "name": "Joby Aviation",
+                "latitude": 47.9679153,
+                "longitude": 11.6628976,
+                "user_id": 1,
+                "description": null
+            }
+        ],
+        "delete_venue_1": {
+            "id": 1,
+            "name": "The O2",
+            "description": null,
+            "longitude": 0.003,
+            "latitude": 51.503,
+            "user_id": 1
+        },
+        "create_venue": {
+            "id": 4,
+            "name": "New name",
+            "description": "New description",
+            "latitude": 6.0,
+            "longitude": 9.0,
+            "user_id": 1
+        },
+        "venue3": {
+            "id": 3,
+            "name": "Joby Aviation",
+            "latitude": 47.9679153,
+            "longitude": 11.6628976,
+            "user_id": 1,
+            "description": null
+        },
+        "update_venue_1": {
+            "id": 1,
+            "name": "Updated venue",
+            "description": "Updated description",
+            "latitude": 4.0,
+            "longitude": 20.0,
+            "user_id": 1
+        }
+    }
+}
